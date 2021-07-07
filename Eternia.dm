@@ -788,29 +788,24 @@ Dominion: Spreads cold"
 #addforeigncom 5902  -- foreign
 #addreccom 5903
 #addreccom 5904
-#addreccom 5905
+#addreccom "Newmon 111"
+#addreccom "Newmon 112"
+#addreccom "Newmon 100"
+#addreccom "Newmon 104"
+#addreccom "Newmon 103"
+#addreccom "Newmon 106"
 #coastcom1 5909
 -- Units
 #addrecunit 5910
-#addrecunit 5911
 #addrecunit 5912
 #addrecunit 5913
-#addrecunit 5914
-#addrecunit 5915
 -- addforeignunit coastunit1
-#addrecunit "Newmon 100"
 #addrecunit "Newmon 101"
 #addrecunit "Newmon 102"
-#addrecunit "Newmon 103"
-#addrecunit "Newmon 104"
 #addrecunit "Newmon 105"
-#addrecunit "Newmon 106"
-#addrecunit "Newmon 107"
 #addrecunit "Newmon 108"
 #addrecunit "Newmon 109"
-#addrecunit "Newmon 110"
-#addrecunit "Newmon 111"
-#addrecunit "Newmon 112"
+#addrecunit "Newmon 113"
 
 ---- LEADERS
 
@@ -849,7 +844,6 @@ Dominion: Spreads cold"
 
 ------- STARTING UNITS
 #startcom 5905
-#startunittype1 5914 10
 #startunittype2 5916 10
 #startscout 5908
 
@@ -863,56 +857,6 @@ Dominion: Spreads cold"
 #name "Newmon 100"
 #end
 #newmonster
-#copystats 2229
-#copyspr 2229
-#name "Newmon 101"
-#end
-#newmonster
-#copystats 1226
-#copyspr 1226
-#name "Newmon 102"
-#end
-#newmonster
-#copystats 1477
-#copyspr 1477
-#name "Newmon 103"
-#end
-#newmonster
-#copystats 1486
-#copyspr 1486
-#name "Newmon 104"
-#end
-#newmonster
-#copystats 1607
-#copyspr 1607
-#name "Newmon 105"
-#end
-#newmonster
-#copystats 1942
-#copyspr 1942
-#name "Newmon 106"
-#end
-#newmonster
-#copystats 525
-#copyspr 525
-#name "Newmon 107"
-#end
-#newmonster
-#copystats 1227
-#copyspr 1227
-#name "Newmon 108"
-#end
-#newmonster
-#copystats 1482
-#copyspr 1482
-#name "Newmon 109"
-#end
-#newmonster
-#copystats 2096
-#copyspr 2096
-#name "Newmon 110"
-#end
-#newmonster
 #copystats 3375
 #copyspr 3375
 #name "Newmon 111"
@@ -921,6 +865,52 @@ Dominion: Spreads cold"
 #copystats 3382
 #copyspr 3383
 #name "Newmon 112"
+#end
+#newmonster
+#copystats 1486
+#copyspr 1486
+#name "Newmon 104"
+#end
+#newmonster
+#copystats 2915
+#copyspr 2915
+#name "Newmon 105"
+#end
+#newmonster
+#copystats 1227
+#copyspr 1227
+#name "Newmon 108"
+#end
+#newmonster
+#copystats 1942
+#copyspr 1942
+#name "Newmon 106"
+#end
+
+#newmonster
+#copystats 1946
+#copyspr 1946
+#name "Newmon 101"
+#end
+#newmonster
+#copystats 1077
+#copyspr 1077
+#name "Newmon 102"
+#end
+#newmonster
+#copystats 2920
+#copyspr 2920
+#name "Newmon 103"
+#end
+#newmonster
+#copystats 3464
+#copyspr 3464
+#name "Newmon 109"
+#end
+#newmonster
+#copystats 1482
+#copyspr 1482
+#name "Newmon 113"
 #end
 --- COMMANDERS
 
@@ -1030,88 +1020,6 @@ Special Notes: If the Witch enters a battle with Wiccans by her side, she will d
 #onebattlespell "Sabbath Master"
 #end
 
--- Kitsune @priestess
-#newmonster 5905
-#clear
-#name "Kitsune"
-#spr1 "./Eternia/kitsune1.tga"
-#spr2 "./Eternia/kitsune2.tga"
-#descr "Kitsune are fox-spirits and tricksters. Their magic is a special kind, not tied to any of the traditional paths but rather a part of their very nature. It manifests in their peerless stealth, shapeshifting, and manipulation of wild spirits. While in human form a kitsune is devastatingly attractive, a fact they often use to bewilder poor unsuspecting farmers or merchants. Though not known for their attention span, kitsune often assume the role of priestesses in their locale - more from the amusement they gain from a god's power than any true devotion."
--- Essentials
-#nametype 133
-#gcost 90
-#rcost 3
-#hp 11
-#size 2
-#prot 0
-#mr 18
-#mor 9
-#str 9
-#att 11
-#def 12
-#prec 13
-#enc 2
-#mapmove 1
-#ap 8
-#weapon 576
-#weapon 383
--- Optional Abilities
-#shapechange 5906
-#holy
-#spy
-#beckon 10
-#elegist 1
-#stealthy 30
-#animal
-#forestsurvival
-#female
-#poorleader
-#poormagicleader
-#startage 149
-#maxage 500
-#itemslots 15494
-#batstartsum4 527
-#magicskill 8 4
-#end
-
--- Kitsune @priestess, 2nd form
-#newmonster 5906
-#clear
-#name "Kitsune"
-#copyspr 1434
-#descr "Kitsune are fox-spirits and tricksters. Their magic is a special kind, not tied to any of the traditional paths but rather a part of their very nature. It manifests in their peerless stealth, shapeshifting, and manipulation of wild spirits. While in human form a kitsune is devastatingly attractive, a fact they often use to bewilder poor unsuspecting farmers or merchants. Though not known for their attention span, kitsune often assume the role of priestesses in their locale - more from the amusement they gain from a god's power than any true devotion."
--- Essentials
-#nametype 133
-#hp 5
-#size 2
-#prot 2
-#mr 18
-#mor 7
-#str 5
-#att 11
-#def 14
-#prec 13
-#enc 2
-#mapmove 2
-#ap 28
-#weapon 20
--- Optional Abilities
-#shapechange 5905
-#holy
-#spy
-#stealthy 30
-#animal
-#forestsurvival
-#mountainsurvival
-#female
-#poorleader
-#poormagicleader
-#startage 149
-#maxage 500
-#itemslots 12288
-#magicskill 8 1
-#end
-
 -- Naga @coastal
 #newmonster 5909
 #name "Nagini"
@@ -1176,37 +1084,6 @@ Special Notes: If the Witch enters a battle with Wiccans by her side, she will d
 #itemslots 15494
 #end
 
--- Satyr Berserker
-#newmonster 5911
-#name "Satyr Ram"
-#descr "In early ages, even beastmen were more animal than human, as evidenced by the early satyrs. Covered in coarse white fur and adorned with large, curling horns, they would dance through moonlit glades in revelry with the dryads, who would beatify their horns with draperies of hoarfrost and berries. In battle however the traditional satyr discipline of hoplite armies has yet to show itself, as these satyrs are impetuous berserkers who rush in with their spears regardless of enemy. As a wise centuar once said 'satyrs do not ask how many are the enemy, but only their direction'."
-#copyspr 1162
-#gcost 27
-#rcost 20
-#hp 16
-#size 2
-#prot 1
-#mr 14
-#mor 13
-#str 13
-#att 12
-#def 16
-#prec 10
-#enc 1
-#ap 12
-#maxage 90
-#coldres 5
-#mountainsurvival
-#forestsurvival
-#berserk 3
-#heal
-#weapon 1
-#weapon 55
-#armor 5
-#armor 2
-#itemslots 15494
-#end
-
 -- Eagle Warrior
 #newmonster 5912
 #name "Eagle Warrior"
@@ -1267,59 +1144,4 @@ Special Notes: If a true Witch is present, she will draw any Wiccans into a sabb
 #weapon 9
 #itemslots 15494
 #onebattlespell "Sabbath Slave"
-#end
-
--- Acromantula
-#newmonster 5914
-#name "Acromantula"
-#descr "Deep in the darkest forest unknown to man, there live beings grown to huge proportions and might. The Acromantulae were once normal spiders, but over time their forest homes grew, their food grew, and so did they. Living in a world so covered with leaf and ivy that not even noontide sunshine leaks through, these hunters spin their great webs hoping to catch a juicy ettin or luscious nymph."
-#copyspr 899
-#gcost 70
-#rcost 1
-#hp 55
-#size 6
-#prot 16
-#mr 16
-#mor 14
-#str 11
-#att 14
-#def 11
-#prec 5
-#enc 2
-#ap 22
-#maxage 90
-#animal
-#forestsurvival
-#poisonres 15
-#weapon 65
-#weapon 261
-#itemslots 4096
-#end
-
--- Ettin
-#newmonster 5915
-#name "Ettin"
-#descr "Deep in the darkest forest unknown to man, there live beings grown to huge proportions and might. Here also are ancient throwbacks, expiriments of gods from an earlier age. The ettin were considered a mistake when first created, but, given their size and strength, perhaps this mistake may prove useful.."
-#copyspr 488
-#gcost 90
-#rcost 1
-#hp 82
-#size 6
-#prot 11
-#mr 15
-#mor 15
-#str 26
-#att 14
-#def 7
-#prec 11
-#enc 4
-#ap 15
-#maxage 50
-#ambidextrous 6
-#undisciplined
-#mountainsurvival
-#forestsurvival
-#weapon 165
-#armor 44
-#itemslots 15494
 #end
