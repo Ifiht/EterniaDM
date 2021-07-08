@@ -610,11 +610,11 @@ Although similar to true dragons, the Kismet are oddly weak, making up for their
 #path 0
 #level 4
 #rarity 5
-#gems 0 9
-#gems 2 9
+#gems 0 5
+#gems 2 5
 #homecom 5981 -- Marid
 #homemon 5995 -- Afrit
-#summonlvl4 5982 -- Phoenix
+#homecom 5982 -- Phoenix
 #wallcom 5982 -- Phoenix
 #decscale 2
 #conjcost 50
@@ -781,9 +781,9 @@ Dominion: Spreads cold"
 ---- RECRUITS
 #clearrec
 #addreccom 5980 -- Troll Shaman
-#addreccom 5981 -- Marid
-#addreccom 5982 -- Phoenix
-#addreccom 5983 -- Kappa Commander
+- #addreccom 5981 -- Marid
+- #addreccom 5982 -- Phoenix
+#coastcom 5983 -- Kappa Commander
 #addreccom 5984 -- Eternal Princess
 #addreccom 5985 -- Mistress of Archers
 #addreccom 5986 -- Dryad
@@ -794,8 +794,8 @@ Dominion: Spreads cold"
 #addrecunit 5992 -- Firebird
 #addrecunit 5993 -- Flame Warden
 #addrecunit 5994 -- Eternal Knight
-#addrecunit 5995 -- Afrit Warrior
-#addrecunit 5996 -- Kappa
+- #addrecunit 5995 -- Afrit Warrior
+#coastunit1 5996 -- Kappa
 #addrecunit 5997 -- Huntress
 #addrecunit 5998 -- Eagle Warrior
 #addrecunit 5999 -- Witch Apprentice
@@ -803,10 +803,10 @@ Dominion: Spreads cold"
 ---- LEADERS
 
 ----- HEROES
-#hero1 1484
-#hero2 1485
-#hero3 1486
-#hero4 1487
+#hero1 5701
+#hero2 563
+#hero3 911
+#hero4 912
 #hero5 -1
 #hero6 -1
 
@@ -854,13 +854,15 @@ Dominion: Spreads cold"
 #copystats 649
 #copyspr 649
 #name "Troll Shaman"
+#reqlab
 #end
 
 #newmonster 5981
 #copystats 3375
 #copyspr 3375
 #name "Marid"
-#descr "Marid, Daughters of the FLame, are magnificently powerful beings, masters of fire and nature magic, known for their beauty and exquisite manners. The Marid lived sequestered lives in Jannah, the enchanted gardens of Ubar, and rarely left the beautiful paradise unless tasked to perform a special mission. When magic dwindled and Ubar lost influence most of them dispersed and fled, but a few Marid remained, clinging to the residual magic of the Garden. Drawn to sources of magic, they are now only found in the hidden reaches of the most enchanted kingdoms. Marid are Jiniris and share the traits of pure-blooded Jinnun, such as glamour, invisibility and a strong connection with magic."
+#descr "Marid, Daughters of the Flame, are magnificently powerful beings, masters of fire and nature magic, known for their beauty and exquisite manners. The Marid lived sequestered lives in Jannah, the enchanted gardens of Ubar, and rarely left the beautiful paradise unless tasked to perform a special mission. When magic dwindled and Ubar lost influence most of them dispersed and fled, but a few Marid remained, clinging to the residual magic of the Garden. Drawn to sources of magic, they are now only found in the hidden reaches of the most enchanted kingdoms. Marid are Jiniris and share the traits of pure-blooded Jinnun, such as glamour, invisibility and a strong connection with magic."
+#reqtemple
 #end
 
 #newmonster 5982
@@ -868,12 +870,22 @@ Dominion: Spreads cold"
 #copyspr 3382
 #name "Pheonix"
 #descr "The Phoenix, the Bird of Dawn, is a magnificent bird of flaming colors with wings as sharp as razors and claws of burning gold. All birds in creation follow their command and gather to witness their demise and rebirth. If they were to die in battle, they are quickly reborn from the ashes. The immortality is limited however to their land of origin, and their stamina."
+#magicskill 8 4
+#domimmortal
+#reqtemple
 #end
 
 #newmonster 5983
-#copystats 1486
+#copystats 1531
 #copyspr 1486
-#name "Kappa Commander"
+#name "Kappa Oni"
+#descr "Kappa Oni are powerful rain spirits and high priests of the kappa clans. The Kappa Oni are the ones who fill the Jugs of Heavenly Waters for the Tlaloque to let the Rain fall upon the Terrestrial Sphere. They are always accompanied by rainfalls. The Kappa has a water filled depression on the top of its head. If this water is spilled, it loses its strength. In battles on dry land, the Kappa will gain fatigue until unconscious. It is also a master of koppo, the bone-breaking technique. The Kappa is also able to mend broken bones, should it suffer injury."
+#gcost 240
+#rpcost 1
+#size 3
+#magicskill 2 3
+#spiritsight
+#onebattlespell "Natural Rain"
 #end
 
 #newmonster 5984
@@ -882,6 +894,8 @@ Dominion: Spreads cold"
 #name "Eternal Princess"
 #descr "The Morgen Princess is a descendant of Dahut, queen of Ys. While younger and not as magically powerful as the sorceresses the princesses have become the true leaders of the queendom. Trained in tactics, magic and combat they have become mage-generals of unsurpassed skill. The Morgen Princesses lead the armies of Ys and the Morvarc'h Knights in the conquest of lands once theirs, and lands never visited."
 #watershape 5970
+#reqtemple
+#holy
 #end
 #newmonster 5970
 #copystats 2919
@@ -889,6 +903,8 @@ Dominion: Spreads cold"
 #name "Eternal Princess"
 #descr "The Morgen Princess is a descendant of Dahut, queen of Ys. While younger and not as magically powerful as the sorceresses the princesses have become the true leaders of the queendom. Trained in tactics, magic and combat they have become mage-generals of unsurpassed skill. The Morgen Princesses lead the armies of Ys and the Morvarc'h Knights in the conquest of lands once theirs, and lands never visited."
 #landshape 5984
+#reqtemple
+#holy
 #end
 
 #newmonster 5985
@@ -911,6 +927,7 @@ Dominion: Spreads cold"
 #goodleader
 #maxage 50
 #coldres 5
+#fireres 5
 #mountainsurvival
 #forestsurvival
 #female
@@ -947,6 +964,8 @@ Dominion: Spreads cold"
 #seduce 1
 #forestsurvival
 #mountainsurvival
+#magicskill 6 1
+#magicskill 8 2
 #female
 #batstartsum5 592
 #end
@@ -993,19 +1012,25 @@ Special Notes: If the Witch enters a battle with Wiccans by her side, she will d
 #researchbonus 8
 #inspiringres 8
 #onebattlespell "Sabbath Master"
+#reqlab
 #end
 
---- UNITS
+--- UNITS ===========================
 #newmonster 5991
 #copystats 1227
 #copyspr 1227
 #name "Kydnid"
+#gcost 40
+#reqtemple
+#holy
 #end
 
 #newmonster 5992
 #copystats 1946
 #copyspr 1946
 #name "Firebird"
+#gcost 25
+#reqlab
 #end
 
 #newmonster 5993
@@ -1013,6 +1038,12 @@ Special Notes: If the Witch enters a battle with Wiccans by her side, she will d
 #copyspr 1077
 #name "Flame Warden"
 #descr "The Flame Wardens are human warriors, trained in the brutal flames of Eternia and freezing forests surrounding. They are clad in flaming golden armour, and have basic resistance to both cold and heat. Thought thier armour is inferior to nations skilled in bronze or steel, their disciplined formations and magic protection more than make up for it. Flame wardens wield short swords and carry shields."
+#cleararmor
+#armor 155 -- gold shield
+#armor 213 -- gold helmet
+#armor 75  -- fire plate
+#coldres 5
+#fireres 5
 #end
 
 #newmonster 5994
@@ -1020,12 +1051,16 @@ Special Notes: If the Witch enters a battle with Wiccans by her side, she will d
 #copyspr 2916
 #name "Eternal Knight"
 #watershape 5971
+#holy
+#reqtemple
 #end
 #newmonster 5971
 #copystats 2915
 #copyspr 2915
 #name "Eternal Knight"
 #landshape 5994
+#holy
+#reqtemple
 #end
 
 #newmonster 5995
@@ -1039,6 +1074,7 @@ Special Notes: If the Witch enters a battle with Wiccans by her side, she will d
 #copystats 1482
 #copyspr 1482
 #name "Kappa"
+#gcost 10
 #end
 
 -- Archer
@@ -1061,6 +1097,7 @@ Special Notes: If the Witch enters a battle with Wiccans by her side, she will d
 #ap 13
 #maxage 50
 #coldres 5
+#fireres 5
 #mountainsurvival
 #forestsurvival
 #female
@@ -1130,4 +1167,5 @@ Special Notes: If a true Witch is present, she will draw any Wiccans into a sabb
 #weapon 9
 #itemslots 15494
 #onebattlespell "Sabbath Slave"
+#reqlab
 #end
