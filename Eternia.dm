@@ -363,7 +363,9 @@ Although similar to true dragons, the Kismet are oddly weak, making up for their
 #goodmagicleader
 #bonusspells 2
 #onebattlespell "Will of the Fates"
-#tmpastralgems 2
+#tmpastralgems 3
+#magicskill 0 2
+#magicskill 2 2
 #magicskill 4 4
 #end
 
@@ -604,15 +606,19 @@ Although similar to true dragons, the Kismet are oddly weak, making up for their
 -------- SITES -----------
 
 #newsite 1851
-#name "Yggdrasil"
-#path 6
+#name "Eternal Flame"
+#path 0
 #level 4
 #rarity 5
-#gems 6 9
-#gems 4 9
--- homecom 5907
-#homemon 5910
+#gems 0 9
+#gems 2 9
+#homecom 5981 -- Marid
+#homemon 5995 -- Afrit
+#summonlvl4 5982 -- Phoenix
+#wallcom 5982 -- Phoenix
+#decscale 2
 #conjcost 50
+#firerange 4
 #end
 
 #newsite 1852
@@ -709,16 +715,6 @@ Although similar to true dragons, the Kismet are oddly weak, making up for their
 #homemon 2497
 #end
 
--#newsite 1858
--#name "1 UP"
--#path 5
--#level 0
--#rarity 1
--#gems 3 1
--#gems 5 1
--#gold 1
--#end
-
 #newsite 1860
 #name "Rainbow Bridge"
 #path 1
@@ -757,17 +753,17 @@ Although similar to true dragons, the Kismet are oddly weak, making up for their
 #name "Eternia"
 #epithet "Winter of the Gods"
 #era 1
-#descr "Eternia is a frozen world far to the North, a throwback from ancient times when man and wolf hunted as brothers and forests still glimmered in the morning frost, without ever having known the threat of an axe. The divergence of races so common to other nations had not yet occured, and humans are just as often found as are eldritch creatures of myth and legend. Though this ancient world contains many wonders, possibly the most immediately noticable for the modern observer is the dominance of women throughout society. Women fill the ranks on the battlefield, and never since the coming of starlight has Eternia known the rule of man. This being said, the Northern armies do lack the brute strength of other nations, but more than make up for it with novel battlefield tactics and a superior race mentality. Unchanged since the creation, Eternia lacks more modern practices such as forging, eleborate building techniques, and horsemanship."
-#summary "Race: Cold resistant, FILL
-Military: Primarily Skirmishers
-Magic: Nature, Air, Water, random paths.
-Priests: Very powerful, no magic skills whatsoever.
+#descr "Eternia is a frozen world far to the North, a throwback from ancient times when man and wolf hunted as brothers and forests still glimmered in the morning frost, without ever having known the threat of an axe. The divergence of races so common to other nations had not yet occured, and humans are just as often found as are eldritch creatures of myth and legend. The inhabitants of Eternia live in a dichotomy of forces. The land itself is in constant winter, but centered around the Eternal Flame, from which many of Eternia's inhabitants draw their strength. Creatures often have cold or flame resistance, and rarely both. Eternia lacks the diversity and fast buildup of other nations, but compensates with the overwhelming quality and skill of their combatants. The land of fire and ice, if allowed to grow, is a force to shape the world."
+#summary "Race: Cold resistant, Fire resistant, few humans and mostly beasts.
+Military: Primarily Skirmishers, fliers, and a solid archer corps.
+Magic: Nature, FIre, Water, random paths.
+Priests: Very powerful, fire & water magic.
 Dominion: Spreads cold"
-#brief "+3 cold, air & water magic, no cavalry."
+#brief "+3 cold, fire & water magic, monsters."
 #flag "./Eternia/flag1.tga"
 #color 1 1 1
 #secondarycolor 0.5 0.7 0
-#idealcold 2
+#idealcold 1
 #likesterr 2
 
 ---- GODS
@@ -784,28 +780,25 @@ Dominion: Spreads cold"
 
 ---- RECRUITS
 #clearrec
-#addreccom 5901
-#addforeigncom 5902  -- foreign
-#addreccom 5903
-#addreccom 5904
-#addreccom "Newmon 111"
-#addreccom "Newmon 112"
-#addreccom "Newmon 100"
-#addreccom "Newmon 104"
-#addreccom "Newmon 103"
-#addreccom "Newmon 106"
-#coastcom1 5909
+#addreccom 5980 -- Troll Shaman
+#addreccom 5981 -- Marid
+#addreccom 5982 -- Phoenix
+#addreccom 5983 -- Kappa Commander
+#addreccom 5984 -- Eternal Princess
+#addreccom 5985 -- Mistress of Archers
+#addreccom 5986 -- Dryad
+#addreccom 5987 -- Frost Wolf
+#addreccom 5988 -- Wormwood Witch
 -- Units
-#addrecunit 5910
-#addrecunit 5912
-#addrecunit 5913
--- addforeignunit coastunit1
-#addrecunit "Newmon 101"
-#addrecunit "Newmon 102"
-#addrecunit "Newmon 105"
-#addrecunit "Newmon 108"
-#addrecunit "Newmon 109"
-#addrecunit "Newmon 113"
+#addrecunit 5991 -- Kydnid
+#addrecunit 5992 -- Firebird
+#addrecunit 5993 -- Flame Warden
+#addrecunit 5994 -- Eternal Knight
+#addrecunit 5995 -- Afrit Warrior
+#addrecunit 5996 -- Kappa
+#addrecunit 5997 -- Huntress
+#addrecunit 5998 -- Eagle Warrior
+#addrecunit 5999 -- Witch Apprentice
 
 ---- LEADERS
 
@@ -819,11 +812,13 @@ Dominion: Spreads cold"
 
 ----- STARTSITES
 #clearsites
-#startsite "Yggdrasil"
+#startsite "Eternal Flame"
 
 ----- STRUCTURES
 
 #fortera 0
+#homefort 23
+#buildfort 21
 #labcost 500
 #templecost 300
 #templepic 10
@@ -835,87 +830,68 @@ Dominion: Spreads cold"
 
 ------- PROVINCE DEFENCE
 
-#defcom1 5906
+#defcom1 59
 #defcom2 5904
 #defunit1 5913
 #defunit1b 517
-#defunit2 5909
+#defunit2 5911
 #defunit2b 511
 
 ------- STARTING UNITS
-#startcom 5905
-#startunittype2 5916 10
-#startscout 5908
+#startcom 5985
+#startunittype1 5993
+#startunitnbrs1 10
+#startunittype2 5997
+#startunitnbrs2 10
+#startscout 5987
 
 ---------------------END ERIU
 #end
 
 ----- NATION SPECIFIC UNITS
-#newmonster
+--- COMMANDERS
+#newmonster 5980
 #copystats 649
 #copyspr 649
-#name "Newmon 100"
+#name "Troll Shaman"
 #end
-#newmonster
+
+#newmonster 5981
 #copystats 3375
 #copyspr 3375
-#name "Newmon 111"
+#name "Marid"
+#descr "Marid, Daughters of the FLame, are magnificently powerful beings, masters of fire and nature magic, known for their beauty and exquisite manners. The Marid lived sequestered lives in Jannah, the enchanted gardens of Ubar, and rarely left the beautiful paradise unless tasked to perform a special mission. When magic dwindled and Ubar lost influence most of them dispersed and fled, but a few Marid remained, clinging to the residual magic of the Garden. Drawn to sources of magic, they are now only found in the hidden reaches of the most enchanted kingdoms. Marid are Jiniris and share the traits of pure-blooded Jinnun, such as glamour, invisibility and a strong connection with magic."
 #end
-#newmonster
+
+#newmonster 5982
 #copystats 3382
-#copyspr 3383
-#name "Newmon 112"
+#copyspr 3382
+#name "Pheonix"
+#descr "The Phoenix, the Bird of Dawn, is a magnificent bird of flaming colors with wings as sharp as razors and claws of burning gold. All birds in creation follow their command and gather to witness their demise and rebirth. If they were to die in battle, they are quickly reborn from the ashes. The immortality is limited however to their land of origin, and their stamina."
 #end
-#newmonster
+
+#newmonster 5983
 #copystats 1486
 #copyspr 1486
-#name "Newmon 104"
-#end
-#newmonster
-#copystats 2915
-#copyspr 2915
-#name "Newmon 105"
-#end
-#newmonster
-#copystats 1227
-#copyspr 1227
-#name "Newmon 108"
-#end
-#newmonster
-#copystats 1942
-#copyspr 1942
-#name "Newmon 106"
+#name "Kappa Commander"
 #end
 
-#newmonster
-#copystats 1946
-#copyspr 1946
-#name "Newmon 101"
-#end
-#newmonster
-#copystats 1077
-#copyspr 1077
-#name "Newmon 102"
-#end
-#newmonster
+#newmonster 5984
 #copystats 2920
 #copyspr 2920
-#name "Newmon 103"
+#name "Eternal Princess"
+#descr "The Morgen Princess is a descendant of Dahut, queen of Ys. While younger and not as magically powerful as the sorceresses the princesses have become the true leaders of the queendom. Trained in tactics, magic and combat they have become mage-generals of unsurpassed skill. The Morgen Princesses lead the armies of Ys and the Morvarc'h Knights in the conquest of lands once theirs, and lands never visited."
+#watershape 5970
 #end
-#newmonster
-#copystats 3464
-#copyspr 3464
-#name "Newmon 109"
+#newmonster 5970
+#copystats 2919
+#copyspr 2919
+#name "Eternal Princess"
+#descr "The Morgen Princess is a descendant of Dahut, queen of Ys. While younger and not as magically powerful as the sorceresses the princesses have become the true leaders of the queendom. Trained in tactics, magic and combat they have become mage-generals of unsurpassed skill. The Morgen Princesses lead the armies of Ys and the Morvarc'h Knights in the conquest of lands once theirs, and lands never visited."
+#landshape 5984
 #end
-#newmonster
-#copystats 1482
-#copyspr 1482
-#name "Newmon 113"
-#end
---- COMMANDERS
 
--- Adventurer (archer)
-#newmonster 5901
+#newmonster 5985
 #name "Mistress of Archers"
 #descr "The Northern generals carry bows into battle, emphasizing the hit-and-run tactics common to their race. Although men may at times join the women in battle, no huntress would ever suffer them to lead. Only the greatest female warriors rise to a high enough stature to lead their comrades, and their skill and training give them a slight combat advantage over their sisters. They carry the dryad-bows used by all Northern archer corps."
 #copyspr 2332
@@ -944,10 +920,9 @@ Dominion: Spreads cold"
 #itemslots 15494
 #end
 
--- Deer Rider @mage
-#newmonster 5902
-#name "Vila"
-#descr "The vila is a powerful mountain spirit. Riding naked on a wild stag, her beauty is only lessened by her cloven feet, a trait she is immensely sensitive about. The vila is capable of enthralling men with her beauty and spellsongs. A manifestation of nature similar ot the true dryads, she shares their healing power and aptitude for forest magic. When in battle, woodland spirits will come to her aid. Since she is a woodland spirit, the Vila shuns civilization, and may only be found in border terrirories or uncultivated areas."
+#newmonster 5986
+#name "Dryad"
+#descr "The dryad is a powerful mountain spirit. Riding naked on a wild stag, her beauty is only lessened by her cloven feet, a trait she is immensely sensitive about. The dryad is capable of enthralling men with her beauty and spellsongs. A manifestation of nature similar ot the true dryads, she shares their healing power and aptitude for forest magic. When in battle, woodland spirits will come to her aid. Since she is a woodland spirit, the Vila shuns civilization, and may only be found in border terrirories or uncultivated areas."
 #copyspr 1942
 #gcost 255
 #rcost 25
@@ -977,7 +952,7 @@ Dominion: Spreads cold"
 #end
 
 -- White Wolf @scout
-#newmonster 5903
+#newmonster 5987
 #copystats 2474
 #name "Frost Wolf"
 #descr "The animal people lived long, long ago, when the sun was new and no larger than a star, when the earth was young, and the tall firs of the forest no larger than an arrow. The sun has grown and times have changed, but some of the mightier species still remember their heritage and learn to speak the tongues of man. Though they cannot lead, the White Wolves often use their great stealth to pass enemy lines and gather information."
@@ -986,7 +961,7 @@ Dominion: Spreads cold"
 #end
 
 -- Witch @researcher
-#newmonster 5904
+#newmonster 5988
 #name "Wormwood Witch"
 #descr "In the depths of the Wormwood lies and ancient ivy-covered castle, hidden by illusions and mighty enchantments. This is where the Wormwood Witches gather, and theirs is one of the oldest and most powerful sects. The nature of their coven allows them to aid eachother when researching magic, and they are often accompanied by a pet familiar.
 Special Notes: If the Witch enters a battle with Wiccans by her side, she will draw them into a sabbath circle to relieve her fatigue costs."
@@ -1020,43 +995,54 @@ Special Notes: If the Witch enters a battle with Wiccans by her side, she will d
 #onebattlespell "Sabbath Master"
 #end
 
--- Naga @coastal
-#newmonster 5909
-#name "Nagini"
-#descr "The dragons of Eternia are truer than most, and have only one form their whole life. Untainted by the mingling with human flesh, these beasts are stonger and less tame than their shapeshifting brothers, though they suffer a lesser magical aptitude."
-#copyspr 265
-#gcost 1000
-#hp 125
-#size 6
-#prot 18
-#mr 18
-#mor 30
-#str 25
-#att 15
-#def 11
-#prec 12
-#enc 3
-#ap 10
-#okleader
-#poormagicleader
-#maxage 1000
-#coldres 15
-#fear 10
-#flying
-#mountainsurvival
-#itemslots 12416
-#cold 2
-#magicskill 2 2
-#weapon "Dragon Frost"
-#weapon "Bite"
-#weapon "Claw"
-#weapon "Tail Sweep"
+--- UNITS
+#newmonster 5991
+#copystats 1227
+#copyspr 1227
+#name "Kydnid"
 #end
 
---- UNITS
+#newmonster 5992
+#copystats 1946
+#copyspr 1946
+#name "Firebird"
+#end
+
+#newmonster 5993
+#copystats 1077
+#copyspr 1077
+#name "Flame Warden"
+#descr "The Flame Wardens are human warriors, trained in the brutal flames of Eternia and freezing forests surrounding. They are clad in flaming golden armour, and have basic resistance to both cold and heat. Thought thier armour is inferior to nations skilled in bronze or steel, their disciplined formations and magic protection more than make up for it. Flame wardens wield short swords and carry shields."
+#end
+
+#newmonster 5994
+#copystats 2916
+#copyspr 2916
+#name "Eternal Knight"
+#watershape 5971
+#end
+#newmonster 5971
+#copystats 2915
+#copyspr 2915
+#name "Eternal Knight"
+#landshape 5994
+#end
+
+#newmonster 5995
+#copystats 3464
+#copyspr 3464
+#name "Afrit Warrior"
+#descr "Afreet are powerful Jinnun born from Smokeless Flame. Endowed with exceptional physical and magical might they are arrogant and cruel, and could be perceived as outright evil. The Afreet and their Marid ruled the magical kingdom of Ubar and the lesser Jinnun. There are few Afreet and their warriors only join armies when called upon by their Marid. When commanded by their Marid a few Djinn Warriors can obliterate entire armies by themselves. Afreet are spiritual beings and are invisible until they manifest. When wounded they reveal their true form, ablaze with Smokeless Flame, a pure green and yellow fire of incredible heat. Afreet are attuned to magic and are stronger in provinces where magic is strong. Afreet suffer from two weaknesses, iron and salt, and with the aid of these mankind might prevail."
+#end
+
+#newmonster 5996
+#copystats 1482
+#copyspr 1482
+#name "Kappa"
+#end
 
 -- Archer
-#newmonster 5910
+#newmonster 5997
 #name "Huntress"
 #descr "The archers of the Northlands have two main advantages in battle: Firstly, they are women. Second, they carry with them bows sung out of living wood by the dryads of the Northern forests. These bows outshoot all but the great yew-bows of Man, and their wielders make good use of them."
 #copyspr 1162
@@ -1085,7 +1071,7 @@ Special Notes: If the Witch enters a battle with Wiccans by her side, she will d
 #end
 
 -- Eagle Warrior
-#newmonster 5912
+#newmonster 5998
 #name "Eagle Warrior"
 #descr "When man first came into the world he knew very little of it, and looked to animals to guide him. A brave few sought combat tutelage from the greater beasts, and of those the greatest were the eagles. Traveling to the highest eiries they fought and trained with flying predators twice their size. Their training culminated in a leap of faith from Boneshatter Peak, where once in the air their eagle tutor would either dive to catch them, accepting them as a brother, or let them fall. The blessing of the eagles comes with a feather-cloak to allow these wingless to fly unaided. With their flight, great swiftness, and unparalleled bravery, these few men form the strike force of the Northern armies."
 #copyspr 936
@@ -1117,7 +1103,7 @@ Special Notes: If the Witch enters a battle with Wiccans by her side, she will d
 #end
 
 -- Witch Apprentice
-#newmonster 5913
+#newmonster 5999
 #name "Toadstool Wiccan"
 #descr "In the coven of Wormwood Witches, those of lesser skill fill the rank of Wiccan. Basically servants to the Witches, they fetch herbs and brew lesser potions. Though they are not permitted to practice many true spells, their potion skills are at times remarkable. These they use to great effect on the battlefield, where they fling vials of miasmic liquid at approaching enemies. 
 Special Notes: If a true Witch is present, she will draw any Wiccans into a sabbath circle, rendering them mindless and unable to attack."
