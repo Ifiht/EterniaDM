@@ -77,6 +77,7 @@
 
 #newweapon 779
 #name "Woodsong Bow"
+#woodenweapon
 #dmg 11
 #range 40
 #att 5
@@ -85,6 +86,7 @@
 #ammo 14
 #twohanded
 #pierce
+#flyspr 109 1
 #end
 
 #newweapon 780
@@ -617,18 +619,18 @@ Although similar to true dragons, the Kismet are oddly weak, making up for their
 #homecom 5982 -- Phoenix
 #wallcom 5982 -- Phoenix
 #decscale 2
-#conjcost 50
 #firerange 4
 #end
 
 #newsite 1852
-#name "Jack-o-Lantern Fields"
-#path 0
+#name "The Wormwood"
+#path 6
 #level 4
 #rarity 5
-#gems 0 1
-#decscale 4
-#adventureruin 34
+#gems 4 1
+#conjcost 50
+#xp 25
+#decscale 5
 #end
 
 #newsite 1853
@@ -651,17 +653,6 @@ Although similar to true dragons, the Kismet are oddly weak, making up for their
 #claim
 #dominion 5
 #blessairshld 90
-#end
-
-#newsite 1855
-#name "The Hidden Valley"
-#path 4
-#level 4
-#rarity 11
-#temple
-#claim
-#dominion 1
-#decunrest 10
 #end
 
 #selectsite 685
@@ -813,6 +804,7 @@ Dominion: Spreads cold"
 ----- STARTSITES
 #clearsites
 #startsite "Eternal Flame"
+#startsite "The Wormwood"
 
 ----- STRUCTURES
 
@@ -830,12 +822,12 @@ Dominion: Spreads cold"
 
 ------- PROVINCE DEFENCE
 
-#defcom1 59
-#defcom2 5904
-#defunit1 5913
-#defunit1b 517
-#defunit2 5911
-#defunit2b 511
+#defcom1 5985
+#defcom2 5988
+#defunit1 5997
+#defunit1b 5993
+#defunit2 5998
+#defunit2b 5994
 
 ------- STARTING UNITS
 #startcom 5985
@@ -862,6 +854,7 @@ Dominion: Spreads cold"
 #copyspr 3375
 #name "Marid"
 #descr "Marid, Daughters of the Flame, are magnificently powerful beings, masters of fire and nature magic, known for their beauty and exquisite manners. The Marid lived sequestered lives in Jannah, the enchanted gardens of Ubar, and rarely left the beautiful paradise unless tasked to perform a special mission. When magic dwindled and Ubar lost influence most of them dispersed and fled, but a few Marid remained, clinging to the residual magic of the Garden. Drawn to sources of magic, they are now only found in the hidden reaches of the most enchanted kingdoms. Marid are Jiniris and share the traits of pure-blooded Jinnun, such as glamour, invisibility and a strong connection with magic."
+#gcost 400
 #reqtemple
 #end
 
@@ -870,9 +863,14 @@ Dominion: Spreads cold"
 #copyspr 3382
 #name "Pheonix"
 #descr "The Phoenix, the Bird of Dawn, is a magnificent bird of flaming colors with wings as sharp as razors and claws of burning gold. All birds in creation follow their command and gather to witness their demise and rebirth. If they were to die in battle, they are quickly reborn from the ashes. The immortality is limited however to their land of origin, and their stamina."
+#gcost 500
 #magicskill 8 4
 #domimmortal
 #reqtemple
+#maxage 1000
+#startage -1
+#onebattlespell "Phoenix Pyre"
+#nametype 112
 #end
 
 #newmonster 5983
@@ -977,6 +975,8 @@ Dominion: Spreads cold"
 #descr "The animal people lived long, long ago, when the sun was new and no larger than a star, when the earth was young, and the tall firs of the forest no larger than an arrow. The sun has grown and times have changed, but some of the mightier species still remember their heritage and learn to speak the tongues of man. Though they cannot lead, the White Wolves often use their great stealth to pass enemy lines and gather information."
 #copyspr 2474
 #gcost 50
+#startage 4
+#nametype 109
 #end
 
 -- Witch @researcher
@@ -1008,10 +1008,10 @@ Special Notes: If the Witch enters a battle with Wiccans by her side, she will d
 -- Optional Abilities
 #slowrec
 #female
-#batstartsum1 -5
 #researchbonus 8
-#inspiringres 8
+#inspiringres 1
 #onebattlespell "Sabbath Master"
+#batstartsum1 3268
 #reqlab
 #end
 
