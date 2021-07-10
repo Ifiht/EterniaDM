@@ -441,7 +441,7 @@ Although similar to true dragons, the Kismet are oddly weak, making up for their
 #clear
 #name "Amaterasu's Hiccough"
 #descr "In the name of the sun goddess, the kitsune lets out a quick hiccough, or kitsu, to fling a few small sparks across the field."
-#school 2
+#school -1
 #researchlevel 0
 #path 0 8
 #pathlevel 0 1
@@ -461,7 +461,7 @@ Although similar to true dragons, the Kismet are oddly weak, making up for their
 #clear
 #name "Lotus Prayer"
 #descr "The fox chants the Lotus Sutra in jest, yet for some reason it works! The fox gains relief from fatigue, and yet another monk shakes his head in wonderment."
-#school 1
+#school -1
 #researchlevel 0
 #path 0 8
 #pathlevel 0 2
@@ -475,7 +475,7 @@ Although similar to true dragons, the Kismet are oddly weak, making up for their
 #clear
 #name "Foxfire"
 #descr "Rubbing its tails together, the fox shoots off sparks that come alive and attack!"
-#school 0
+#school -1
 #researchlevel 0
 #path 0 8
 #pathlevel 0 3
@@ -490,7 +490,7 @@ Although similar to true dragons, the Kismet are oddly weak, making up for their
 #clear
 #name "Dance with Me!"
 #descr "Twirling in a delightful dervish, the fox-lady entices men all around the battlefield to dance with her. Few can keep pace with a kitsune however, and many will fall down in exhaustion before the dance is over."
-#school 4
+#school -1
 #researchlevel 0
 #path 0 8
 #pathlevel 0 4
@@ -509,7 +509,7 @@ Although similar to true dragons, the Kismet are oddly weak, making up for their
 #clear
 #name "Lights of Ukiyo"
 #descr "The greatest of all fox-tricks, whispers from the floating world rush across the battlefield, turning friend against friend and sundering all alliances. Anyone with calm presence of mind should be able to resist the spell, but the hapless peasants caught in it are liable to tear them down if they don't act swiftly."
-#school 5
+#school -1
 #researchlevel 0
 #path 0 8
 #pathlevel 0 5
@@ -805,12 +805,18 @@ Dominion: Spreads cold"
 #clearsites
 #startsite "Eternal Flame"
 #startsite "The Wormwood"
-
+#coastnation -- The nation’s capital is in a coastal land province.
+#hatesterr 0 		-- plains
+#hatesterr 64 		-- waste
+#hatesterr 4096 	-- cave
+#likesterr 4194304 	-- mountain
+#likesterr 128 		-- forest
+#likesterr 16 		-- highland
 ----- STRUCTURES
 
 #fortera 0
 #homefort 23
-#buildfort 21
+#buildfort 20
 #labcost 500
 #templecost 300
 #templepic 10
@@ -846,6 +852,21 @@ Dominion: Spreads cold"
 #copystats 649
 #copyspr 649
 #name "Troll Shaman"
+#descr "As with all things, even the trolls of Eternia are steeped in age and magic. Unlike every other species, here alone have they truly mastered the higher magics. Led by their first, the warrior-mage Kartuk, they learned to bend the land and forest to their will. They have managed to temper their skin against nearly all the weapons of man, and even against the trolls greatest weakness - fire. They are skilled at healing, but not so kind as their dryad sisters to do it for free.."
+#clearmagic
+#clearspec
+#slashres
+#pierceres
+#bluntres
+#entangle
+#fireres 2
+#coldres 10
+#healer 33
+#mason
+#regeneration
+#magicskill 3 3
+#magicskill 6 2
+#tmpearthgems 1
 #reqlab
 #end
 
@@ -854,8 +875,32 @@ Dominion: Spreads cold"
 #copyspr 3375
 #name "Marid"
 #descr "Marid, Daughters of the Flame, are magnificently powerful beings, masters of fire and nature magic, known for their beauty and exquisite manners. The Marid lived sequestered lives in Jannah, the enchanted gardens of Ubar, and rarely left the beautiful paradise unless tasked to perform a special mission. When magic dwindled and Ubar lost influence most of them dispersed and fled, but a few Marid remained, clinging to the residual magic of the Garden. Drawn to sources of magic, they are now only found in the hidden reaches of the most enchanted kingdoms. Marid are Jiniris and share the traits of pure-blooded Jinnun, such as glamour, invisibility and a strong connection with magic."
+#clearmagic
+#clearspec
+#startage 90
+#maxage 777
 #gcost 400
 #reqtemple
+#reclimit 1
+#reqlab
+#holy
+#magicbeing
+#goodleader
+#expertmagicleader
+#flying
+#stormimmune
+#seduce 12
+#stealthy 15
+#illusion
+#fireres 25
+#airshield 60
+#magicskill 0 1
+#magicskill 1 3
+#magicskill 8 1
+#ironvul 4
+#ethereal
+#female
+#spiritsight
 #end
 
 #newmonster 5982
@@ -901,6 +946,7 @@ Dominion: Spreads cold"
 #name "Eternal Princess"
 #descr "The Morgen Princess is a descendant of Dahut, queen of Ys. While younger and not as magically powerful as the sorceresses the princesses have become the true leaders of the queendom. Trained in tactics, magic and combat they have become mage-generals of unsurpassed skill. The Morgen Princesses lead the armies of Ys and the Morvarc'h Knights in the conquest of lands once theirs, and lands never visited."
 #landshape 5984
+#superiorleader
 #reqtemple
 #holy
 #end
@@ -922,7 +968,7 @@ Dominion: Spreads cold"
 #prec 15
 #enc 1
 #ap 13
-#goodleader
+#expertleader
 #maxage 50
 #coldres 5
 #fireres 5
@@ -1003,7 +1049,7 @@ Special Notes: If the Witch enters a battle with Wiccans by her side, she will d
 #okmagicleader
 #maxage 80
 #itemslots 15494
-#custommagic 32640 330
+#custommagic 32640 255
 #weapon "Quarterstaff"
 -- Optional Abilities
 #slowrec
@@ -1068,6 +1114,26 @@ Special Notes: If the Witch enters a battle with Wiccans by her side, she will d
 #copyspr 3464
 #name "Afrit Warrior"
 #descr "Afreet are powerful Jinnun born from Smokeless Flame. Endowed with exceptional physical and magical might they are arrogant and cruel, and could be perceived as outright evil. The Afreet and their Marid ruled the magical kingdom of Ubar and the lesser Jinnun. There are few Afreet and their warriors only join armies when called upon by their Marid. When commanded by their Marid a few Djinn Warriors can obliterate entire armies by themselves. Afreet are spiritual beings and are invisible until they manifest. When wounded they reveal their true form, ablaze with Smokeless Flame, a pure green and yellow fire of incredible heat. Afreet are attuned to magic and are stronger in provinces where magic is strong. Afreet suffer from two weaknesses, iron and salt, and with the aid of these mankind might prevail."
+#clearmagic
+#clearspec
+#startage 130
+#fireshield 3
+#maxage 777
+#reqtemple
+#reclimit 1
+#reqlab
+#holy
+#magicbeing
+#flying
+#stormimmune
+#stealthy 15
+#illusion
+#fireres 25
+#airshield 40
+#ironvul 4
+#ethereal
+#spiritsight
+#speciallook 1
 #end
 
 #newmonster 5996
