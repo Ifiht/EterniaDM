@@ -909,6 +909,12 @@ Dominion: Spreads cold"
 #name "Pheonix"
 #descr "The Phoenix, the Bird of Dawn, is a magnificent bird of flaming colors with wings as sharp as razors and claws of burning gold. All birds in creation follow their command and gather to witness their demise and rebirth. If they were to die in battle, they are quickly reborn from the ashes. The immortality is limited however to their land of origin, and their stamina."
 #gcost 500
+#clearspec
+#animal
+#flying
+#fireres 25
+#heat 2
+#magicskill 0 4
 #magicskill 8 4
 #domimmortal
 #reqtemple
