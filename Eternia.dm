@@ -834,6 +834,12 @@ Dominion: Spreads cold"
 #defunit1b 5993
 #defunit2 5998
 #defunit2b 5994
+--- U/W
+#defcom1 5983
+#defcom2 5984
+#defunit1 5996
+#defunit1b 5991
+#defunit2 5994
 
 ------- STARTING UNITS
 #startcom 5985
