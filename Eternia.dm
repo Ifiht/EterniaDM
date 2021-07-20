@@ -927,6 +927,7 @@ Dominion: Spreads cold"
 #maxage 1000
 #startage -1
 #onebattlespell "Phoenix Pyre"
+#itemslots 28672
 #nametype 112
 #end
 
