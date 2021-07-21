@@ -831,11 +831,17 @@ Dominion: Spreads cold"
 ------- PROVINCE DEFENCE
 
 #defcom1 5985
-#defcom2 5988
+#defcom2 5984
 #defunit1 5997
 #defunit1b 5993
 #defunit2 5998
 #defunit2b 5994
+#wallcom 5985
+#wallcom 5988
+#wallunit 5997
+#wallmult 8
+#wallunit 5999
+#wallmult 2
 --- U/W
 #uwdefcom1 5983
 #uwdefcom2 5984
