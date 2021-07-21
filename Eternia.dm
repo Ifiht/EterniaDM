@@ -778,8 +778,10 @@ Dominion: Spreads cold"
 #addreccom 5984 -- Eternal Princess
 #addreccom 5985 -- Mistress of Archers
 #addreccom 5986 -- Dryad
+#mountaincom 5986 -- Dryad
 #addreccom 5987 -- Frost Wolf
 #addreccom 5988 -- Wormwood Witch
+#forestcom 5988 -- Wormwood Witch
 -- Units
 #addrecunit 5991 -- Kydnid
 #addrecunit 5992 -- Firebird
@@ -907,6 +909,7 @@ Dominion: Spreads cold"
 #ethereal
 #female
 #spiritsight
+#itemslots 13446
 #end
 
 #newmonster 5982
@@ -1147,6 +1150,7 @@ Special Notes: If the Witch enters a battle with Wiccans by her side, she will d
 #ethereal
 #spiritsight
 #speciallook 1
+#itemslots 13446
 #end
 
 #newmonster 5996
