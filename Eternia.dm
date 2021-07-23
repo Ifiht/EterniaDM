@@ -228,6 +228,10 @@
 #onebattlespell "Rain"
 #end
 
+#selectmonster 1561
+#spreadcold
+#end
+
 -- Zeus
 
 #newmonster 5701
@@ -825,8 +829,9 @@ Dominion: Spreads cold"
 
 ----- DOMINION
 
-#spreadcold 1
+#spreadcold 2
 #spreadchaos -1
+#templegems 4
 
 ------- PROVINCE DEFENCE
 
@@ -922,7 +927,7 @@ Dominion: Spreads cold"
 #copystats 3382
 #copyspr 3382
 #name "Pheonix"
-#descr "The Phoenix, the Bird of Dawn, is a magnificent bird of flaming colors with wings as sharp as razors and claws of burning gold. All birds in creation follow their command and gather to witness their demise and rebirth. If they were to die in battle, they are quickly reborn from the ashes. The immortality is limited however to their land of origin, and their stamina."
+#descr "The Phoenix, the Bird of Dawn, is a magnificent bird of flaming colors with wings as sharp as razors and claws of burning gold. Omens of luck and rebirth, all birds in creation follow their command and gather to witness their demise and rejuvination. If they were to die in battle, they are quickly reborn from the ashes. The immortality is limited however to their land of origin, and their stamina."
 #gcost 500
 #clearspec
 #animal
@@ -936,6 +941,7 @@ Dominion: Spreads cold"
 #maxage 1000
 #startage -1
 #onebattlespell "Phoenix Pyre"
+#nobadevents 99
 #itemslots 28672
 #nametype 112
 #end
