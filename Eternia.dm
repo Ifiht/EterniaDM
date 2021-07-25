@@ -200,6 +200,10 @@
 #spr1 "./Eternia/irminsul.tga"
 #end
 
+#selectmonster 2875
+#female
+#end
+
 -- Treelords
 
 #selectmonster 627
